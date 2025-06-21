@@ -10,8 +10,8 @@ transform = transforms.Compose(
         transforms.Normalize((0.5, ), (0.5, )) # with mean 0.5, std 0.5 greyscale image E(0, 1) is coverted to E(-1, 1)
         ])
 
-train_set = torchvision.datasets.FashionMNIST('./data', train=True, transform=transform, download=True)
-val_set = torchvision.datasets.FashionMNIST('./data', train=False, transform=transform, download=True)
+train_set = torchvision.datasets.FashionMNIST('', train=True, transform=transform, download=True)
+val_set = torchvision.datasets.FashionMNIST('', train=False, transform=transform, download=True)
 
 train_loader = torch.utils.data.DataLoader(train_set, batch_size=16, shuffle=True)
 val_loader = torch.utils.data.DataLoader(val_set, batch_size=16, shuffle=True)
